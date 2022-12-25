@@ -9,3 +9,7 @@ plugins:
       metadata:
         name: "Preview"
       path: dist
+    test-doverage
+      metadata:
+        name: "Test Coverage"
+      path: coverage/lcov

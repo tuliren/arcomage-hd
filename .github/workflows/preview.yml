@@ -33,6 +33,5 @@ jobs:
           npm run build
           fi
       - name: Run Stoat Action
-        uses: stoat-dev/stoat-action@v0
+        uses: stoat-dev/stoat-action@main
         if: always()
-

@@ -4,8 +4,8 @@ enabled: true
 plugins:
   job_runtime:
     enabled: true
- static_hosting:
-   pr-preview:
-     metadata:
-       name: "Preview"
-     path: dist
+  static_hosting:
+    pr-preview:
+      metadata:
+        name: "Preview"
+      path: dist

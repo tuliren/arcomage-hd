@@ -5,6 +5,10 @@ plugins:
   job_runtime:
     enabled: true
   static_hosting:
+    test-coverage:
+      metadata:
+        name: "Test Coverage"
+      path: ./coverage/lcov-report
     pr-preview:
       metadata:
         name: "Preview"

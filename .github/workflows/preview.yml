@@ -22,16 +22,8 @@ jobs:
           node-version: '14.x'
       - name: Build App
         run: |
-          if [ -e yarn.lock ]; then
-          yarn install --ignore-optional --frozen-lockfile
+          yarn install --frozen-lockfile
           yarn build
-          elif [ -e package-lock.json ]; then
-          npm ci --no-optional
-          npm run build
-          else
-          npm i --no-optional
-          npm run build
-          fi
       - name: Run Stoat Action
         uses: stoat-dev/stoat-action@main
         if: always()

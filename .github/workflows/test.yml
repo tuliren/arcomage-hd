@@ -46,3 +46,7 @@ jobs:
       - name: Codecov Upload
         if: ${{ success() && matrix.os == 'ubuntu-latest' && matrix.node == '16.x'}}
         uses: codecov/codecov-action@v2
+
+      - name: Run Stoat Action
+        uses: stoat-dev/stoat-action@v0
+        if: always()

@@ -1,0 +1,29 @@
+name: Preview
+
+on:
+  pull_request:
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE.md'
+      - 'CREDIT.md'
+      - 'CHANGELOG.md'
+      - 'devnotes.md'
+      - '.editorconfig'
+    branches:
+      - main
+
+jobs:
+  pr-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - name: Build App
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+      - name: Run Stoat Action
+        uses: stoat-dev/stoat-action@main
+        if: always()

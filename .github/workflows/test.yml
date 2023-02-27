@@ -48,5 +48,5 @@ jobs:
         uses: codecov/codecov-action@v2
 
       - name: Run Stoat Action
-        uses: stoat-dev/stoat-action@liren/support-matrix
+        uses: stoat-dev/stoat-action@main
         if: always()
